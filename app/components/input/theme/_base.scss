@@ -1,0 +1,20 @@
+::-webkit-input-placeholder {color:#4c4c4c;}
+::-moz-placeholder          {color:#4c4c4c;}/* Firefox 19+ */
+:-moz-placeholder           {color:#4c4c4c;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#4c4c4c;}
+
+.input {
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 15px 18px;
+  box-sizing: border-box;
+  text-align: left;
+  outline: none;
+  cursor: pointer;
+  color: #4c4c4c;
+	-moz-transition: border-color .6s ease;
+	-o-transition: border-color .6s ease;
+    -webkit-transition: border-color .6s ease;
+  transition: border-color .6s ease;
+}

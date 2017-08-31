@@ -1,0 +1,22 @@
+.select-gray {
+  border-color: #dcdcdc;
+  
+  &:hover {
+	border-color: #abc42a;
+  }
+  
+  & .cs-options {
+	border-radius: 8px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.15);
+	
+	& .cs-selected {
+	  color: #abc42a;
+	  font-weight: bold;
+	}
+  }
+  
+  &.cs-active {
+	border-color: #abc42a;
+  }
+}

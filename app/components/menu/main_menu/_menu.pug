@@ -1,0 +1,17 @@
+nav.menu-wrapper
+	// Меню
+	mixin navLink(link, name)
+		li(data-menuanchor = data).menu__item
+			a.menu__link(
+			href = link
+			class = {active: name === current}
+			) #{name}
+
+	ul(class="menu  main__menu" id="menu")
+		+navLink ('profile.html', 'Мой профиль')
+		+navLink ('#', 'Избранное (5)')
+		+navLink ('help.html', 'Сообщить о проблеме')
+		+navLink ('#', 'Выход')
+
+.clearfix
+

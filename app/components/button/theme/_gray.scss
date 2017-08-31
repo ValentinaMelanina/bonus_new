@@ -1,0 +1,10 @@
+.btn-color-gray {
+  background: none;
+  border-color: #bababa;
+  color: rgba(146, 146, 146, 0.87);
+  
+  &:hover,
+  &:active {
+    border-color: #abc42a;
+  }
+}

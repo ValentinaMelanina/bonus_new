@@ -1,0 +1,82 @@
+extends ../layout/layout.pug
+
+block variables
+	- var  current = 'Мой профиль'
+
+mixin operations-history (operation)
+	.operations-history_row
+		.operations-history_cell.operations-history_img-info
+			.operations-history_cell_img
+				img(src=operation.logo_brand).operations-history_img
+			.operations-history_cell_info
+				span.operations-history_name_brand Покупка в&ensp;
+					a(href="#")=operation.name_brand
+				.operations-history_cell_price
+					span Номер покупки:&ensp;
+						=operation.purchase_number
+					br
+					span Сумма покупки:&ensp;
+						=operation.purchase_price
+						| ₽
+
+		.operations-history_cell
+			=operation.purchase_date
+		.operations-history_cell
+			span(class="operations-history_status operations-history_status-"+ operation.purchase_status_eng + "")
+				=operation.purchase_status
+			br
+			span.operations-history_awaiting-confirmation=operation.awaiting_confirmation
+		.operations-history_cell
+			span(class="operations-history_bonus operations-history_bonus-" + operation.purchase_status_eng + "")
+				=operation.bonus
+
+
+
+block content
+	// Информация о счете
+	.content-top-info.balance
+		.balance-status
+			.balance-item
+				span.balance-item_status.balance-item_status-available Доступно
+				br
+				span.balance-item_price 1875
+			.balance-item
+				span.balance-item_status.balance-item_status-expected Ожидаются
+				br
+				span.balance-item_price.balance-item_price-status-expected 170
+
+		.balance-info
+			.balance-info-item.balance-info_min-price Минимальная сумма для вывода —  300
+			.balance-info-item.balance-info_conversion При выводе бонусов конвертация происходит по курсу 1 бонус = 1 рубль
+
+		.balance-button
+			button.btn-color-green Вывести бонусы
+			button.btn-color-gray Сообщить о проблеме
+
+
+	// Основные этапы получения бонусов
+	.cacheback-info
+		.cacheback-info_steps.cacheback-info_steps-first
+			|Сумма кэшбэка и информация о покупке появятся в Личном кабинете в течение 2 часов после покупки.
+		.cacheback-info_steps.cacheback-info_steps-second
+			| Обычно магазин подтверждает заказ до 4 недель. Кэшбэк будет зачислен на ваш кошелек в следующем за подтверждением месяце.
+		.cacheback-info_steps.cacheback-info_steps-third
+			| Информация о дате подтверждения заказа будет доступна в истории операции.
+
+
+	//	Заголовок Н2
+	h2 История операций
+
+
+	//	История операций
+	.operations-history
+		.operations-history_header-table
+			.operations-history_cell Информация о покупке
+			.operations-history_cell Дата операции
+			.operations-history_cell Статус
+			.operations-history_cell Бонусы
+		for operation in catalog_brands
+			+operations-history(operation)
+
+	.operations-history_button
+		button.btn-color-green Загрузить еще операции

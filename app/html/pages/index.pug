@@ -1,0 +1,65 @@
+extends ../layout/layout.pug
+
+
+mixin catalog-brands (brand)
+	.catalog-brands__item
+		a(href = "#brand-page.html", class="catalog-brands__link")
+			.catalog-brands__block-img
+				img(src = brand.logo_brand, class="catalog-brands__img")
+			.catalog-brands__info
+				span.catalog-brands__price-old до
+					span.catalog-brands__price-old-number=brand.old_bonus
+				span.catalog-brands__price
+					=brand.bonus_brand
+					| %
+				span.catalog-brands__price-text бонусов
+				.add-favorites_icon
+		.catalog-brands-favorites
+			a.catalog-brands-favorites-wrap(href="#")
+
+mixin category-list (category)
+	option(value="sort-" + category.category_name_eng)=category.category_name + " (" + category.category_quantity + ")"
+
+
+
+block variables
+	- var  current = 'Главная'
+
+block content
+	// Фильтр брендов
+	.filter
+		// Категории
+		div.select-wrap
+			select.cs-select.select-gray.filter-catalog
+				option(value="" disabled selected hidden) Все категории
+				for category in category_list
+					+category-list(category)
+
+		// Сортировка
+		div.select-wrap.select-wrap-sort
+			select.cs-select.select-gray.filter-sort
+				option(value="sort-popularity") Сортировать по популярности
+				option(value="sort-date") Сортировать по дате
+
+		// Поиск
+		form.filter-search(action="", method="post")
+			input(type="search",
+					placeholder="Поиск партнеров с кэшбэком",
+					class="input input-gray input-dropdown input-filter-search")
+			input(type="submit",
+					placeholder="Поиск партнеров с кэшбэком",
+					value="",
+					class="input-filter-submit")
+
+	// Каталог брендов
+	.catalog-brands
+		for brand in catalog_brands
+			+catalog-brands(brand)
+
+	.button-block
+		button.btn-color-green Показать все магазины
+
+
+
+
+

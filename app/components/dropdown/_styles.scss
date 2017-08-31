@@ -1,0 +1,135 @@
+/* Default custom select styles */
+.select-wrap {
+  display: inline-block;
+  line-height: normal;
+}
+div.cs-select {
+  //position: relative;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  color: #4c4c4c;
+  box-sizing: border-box;
+  text-align: left;
+  outline: none;
+  -moz-transition: border-color .6s ease,;
+  -o-transition: border-color .6s ease;
+  -webkit-transition: border-color .6s ease;
+  
+  &.filter-catalog {
+	width: 162px;
+  }
+}
+
+div.cs-select:focus {
+  outline: none; /* For better accessibility add a style for this in your skin */
+}
+
+.cs-select select {
+  display: none;
+}
+
+.cs-select span {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Placeholder and selected option */
+.cs-select > span {
+  padding: 15px 35px 15px 18px;
+}
+
+.cs-select > span::after,
+.cs-select .cs-selected span::after {
+  speak: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cs-select > span::after {
+  content: '';
+  background: url("../images/icon.svg") no-repeat -5px -483px;
+  height: 7px;
+  width: 11px;
+  position: absolute;
+  right: 18px;
+  z-index: 100;
+}
+.cs-select:hover > span::after,
+.cs-select.cs-active span::after {
+  background-position: -5px -500px;
+}
+
+.cs-select.cs-active > span::after {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+div.cs-active {
+  z-index: 200;
+}
+
+/* Options */
+.cs-select .cs-options {
+  position: absolute;
+  left: 0;
+  margin-top: 16px;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  visibility: hidden;
+  z-index: 150;
+}
+
+.cs-select.cs-active .cs-options {
+  visibility: visible;
+}
+
+.filter-catalog.cs-select ul {
+  list-style: none;
+  margin: 0;
+  //padding: 0;
+  overflow:hidden;
+  padding: 30px;
+}
+.filter-catalog.cs-select ul li {
+  float:left;
+  display:inline;
+  width:33.333%;
+}
+.cs-select ul span {
+  padding: 15px;
+  cursor: pointer;
+  
+  &:hover {
+	color: #abc42a;
+  }
+}
+.filter-catalog.cs-select ul span {
+  padding: 15px 0;
+}
+
+.cs-select ul li.cs-focus span {
+  background-color: #ddd;
+}
+
+/* Optgroup and optgroup label */
+.cs-select li.cs-optgroup ul {
+  padding-left: 1em;
+}
+
+.cs-select li.cs-optgroup > span {
+  cursor: default;
+}
+
+//Theme
+@import "theme/gray";
+

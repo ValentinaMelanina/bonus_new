@@ -1,0 +1,36 @@
+.menu-wrapper {
+  background: #f7f7f7;
+  padding: 20px 25px;
+  width: 220px;
+  line-height: normal;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  font-size: 13px;
+  border-radius: 4px;
+}
+.main__menu {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  
+  & .menu__item {
+	box-sizing: border-box;
+	width: 100%;
+  }
+  
+  & .menu__link {
+	cursor: pointer;
+	height: 100%;
+	display: block;
+	padding: 9px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+ 
+	&:hover,
+	&.active {
+	  border-color: #abc42a;
+	}
+  }
+}

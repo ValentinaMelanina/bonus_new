@@ -1,0 +1,188 @@
+
+<!-- - Категории-->
+<!-- - Каталог брендов--><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="author" href="humans.txt">
+    <!-- -------------------->
+    <title>Тестовый сайт</title>
+    <!--todo добавить фавикон-->
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- CSS-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+    <!-- JS--><!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header-->
+      <!-- Content-->
+      <div class="container-content">
+        <!-- Боковое меню-->
+        <div class="sidebar">
+          <h2>Бонусный счет</h2>
+          <nav class="menu-wrapper">
+            <!-- Меню-->
+            <ul class="menu  main__menu" id="menu">
+                          <li class="menu__item"><a class="menu__link active" href="profile.html">Мой профиль</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#">Избранное (5)</a></li>
+                          <li class="menu__item"><a class="menu__link" href="help.html">Сообщить о проблеме</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#">Выход</a></li>
+            </ul>
+          </nav>
+          <div class="clearfix"></div>
+        </div>
+        <!--	Контент-->
+        <div class="content">
+          <!-- Информация о счете-->
+          <div class="content-top-info balance">
+            <div class="balance-status">
+              <div class="balance-item"><span class="balance-item_status balance-item_status-available">Доступно</span><br><span class="balance-item_price">1875</span></div>
+              <div class="balance-item"><span class="balance-item_status balance-item_status-expected">Ожидаются</span><br><span class="balance-item_price balance-item_price-status-expected">170</span></div>
+            </div>
+            <div class="balance-info">
+              <div class="balance-info-item balance-info_min-price">Минимальная сумма для вывода —  300</div>
+              <div class="balance-info-item balance-info_conversion">При выводе бонусов конвертация происходит по курсу 1 бонус = 1 рубль</div>
+            </div>
+            <div class="balance-button">
+              <button class="btn-color-green">Вывести бонусы</button>
+              <button class="btn-color-gray">Сообщить о проблеме</button>
+            </div>
+          </div>
+          <!-- Основные этапы получения бонусов-->
+          <div class="cacheback-info">
+            <div class="cacheback-info_steps cacheback-info_steps-first">Сумма кэшбэка и информация о покупке появятся в Личном кабинете в течение 2 часов после покупки.</div>
+            <div class="cacheback-info_steps cacheback-info_steps-second">Обычно магазин подтверждает заказ до 4 недель. Кэшбэк будет зачислен на ваш кошелек в следующем за подтверждением месяце.</div>
+            <div class="cacheback-info_steps cacheback-info_steps-third">Информация о дате подтверждения заказа будет доступна в истории операции.</div>
+          </div>
+          <!--	Заголовок Н2-->
+          <h2>История операций</h2>
+          <!--	История операций-->
+          <div class="operations-history">
+            <div class="operations-history_header-table">
+              <div class="operations-history_cell">Информация о покупке</div>
+              <div class="operations-history_cell">Дата операции</div>
+              <div class="operations-history_cell">Статус</div>
+              <div class="operations-history_cell">Бонусы</div>
+            </div>
+            <div class="operations-history_row">
+              <div class="operations-history_cell operations-history_img-info">
+                <div class="operations-history_cell_img"><img class="operations-history_img" src="../../images/megafon.png"/></div>
+                <div class="operations-history_cell_info"><span class="operations-history_name_brand">Покупка в&ensp;<a href="#">Мегафон</a></span>
+                  <div class="operations-history_cell_price"><span>Номер покупки:&ensp;370320403</span><br/><span>Сумма покупки:&ensp;3 761₽</span></div>
+                </div>
+              </div>
+              <div class="operations-history_cell">19 августа 15:27
+              </div>
+              <div class="operations-history_cell"><span class="operations-history_status operations-history_status-confirmed">Подтверждено</span><br/><span class="operations-history_awaiting-confirmation"></span></div>
+              <div class="operations-history_cell"><span class="operations-history_bonus operations-history_bonus-confirmed">+92</span></div>
+            </div>
+            <div class="operations-history_row">
+              <div class="operations-history_cell operations-history_img-info">
+                <div class="operations-history_cell_img"><img class="operations-history_img" src="../../images/mvideo.png"/></div>
+                <div class="operations-history_cell_info"><span class="operations-history_name_brand">Покупка в&ensp;<a href="#">М.Видео</a></span>
+                  <div class="operations-history_cell_price"><span>Номер покупки:&ensp;370320403</span><br/><span>Сумма покупки:&ensp;5 761₽</span></div>
+                </div>
+              </div>
+              <div class="operations-history_cell">18 августа 15:27
+              </div>
+              <div class="operations-history_cell"><span class="operations-history_status operations-history_status-confirmed">Подтверждено</span><br/><span class="operations-history_awaiting-confirmation"></span></div>
+              <div class="operations-history_cell"><span class="operations-history_bonus operations-history_bonus-confirmed">+27</span></div>
+            </div>
+            <div class="operations-history_row">
+              <div class="operations-history_cell operations-history_img-info">
+                <div class="operations-history_cell_img"><img class="operations-history_img" src="../../images/lamoda.svg"/></div>
+                <div class="operations-history_cell_info"><span class="operations-history_name_brand">Покупка в&ensp;<a href="#">LaModa</a></span>
+                  <div class="operations-history_cell_price"><span>Номер покупки:&ensp;370320403</span><br/><span>Сумма покупки:&ensp;5 761₽</span></div>
+                </div>
+              </div>
+              <div class="operations-history_cell">18 августа 15:27
+              </div>
+              <div class="operations-history_cell"><span class="operations-history_status operations-history_status-awaiting-confirmation">Ожидается подтверждение</span><br/><span class="operations-history_awaiting-confirmation">~ через 26 дней </span></div>
+              <div class="operations-history_cell"><span class="operations-history_bonus operations-history_bonus-awaiting-confirmation">+27</span></div>
+            </div>
+            <div class="operations-history_row">
+              <div class="operations-history_cell operations-history_img-info">
+                <div class="operations-history_cell_img"><img class="operations-history_img" src="../../images/media-markt.png"/></div>
+                <div class="operations-history_cell_info"><span class="operations-history_name_brand">Покупка в&ensp;<a href="#">Мегафон</a></span>
+                  <div class="operations-history_cell_price"><span>Номер покупки:&ensp;370320403</span><br/><span>Сумма покупки:&ensp;5 761₽</span></div>
+                </div>
+              </div>
+              <div class="operations-history_cell">18 августа 15:27
+              </div>
+              <div class="operations-history_cell"><span class="operations-history_status operations-history_status-canceled">Отменено</span><br/><span class="operations-history_awaiting-confirmation"></span></div>
+              <div class="operations-history_cell"><span class="operations-history_bonus operations-history_bonus-canceled">–</span></div>
+            </div>
+            <div class="operations-history_row">
+              <div class="operations-history_cell operations-history_img-info">
+                <div class="operations-history_cell_img"><img class="operations-history_img" src="../../images/media-markt.png"/></div>
+                <div class="operations-history_cell_info"><span class="operations-history_name_brand">Покупка в&ensp;<a href="#">Мегафон</a></span>
+                  <div class="operations-history_cell_price"><span>Номер покупки:&ensp;370320403</span><br/><span>Сумма покупки:&ensp;5 761₽</span></div>
+                </div>
+              </div>
+              <div class="operations-history_cell">18 августа 15:27
+              </div>
+              <div class="operations-history_cell"><span class="operations-history_status operations-history_status-confirmed">Подтверждено</span><br/><span class="operations-history_awaiting-confirmation"></span></div>
+              <div class="operations-history_cell"><span class="operations-history_bonus operations-history_bonus-confirmed">+27</span></div>
+            </div>
+            <div class="operations-history_row">
+              <div class="operations-history_cell operations-history_img-info">
+                <div class="operations-history_cell_img"><img class="operations-history_img" src="../../images/media-markt.png"/></div>
+                <div class="operations-history_cell_info"><span class="operations-history_name_brand">Покупка в&ensp;<a href="#">Мегафон</a></span>
+                  <div class="operations-history_cell_price"><span>Номер покупки:&ensp;370320403</span><br/><span>Сумма покупки:&ensp;5 761₽</span></div>
+                </div>
+              </div>
+              <div class="operations-history_cell">18 августа 15:27
+              </div>
+              <div class="operations-history_cell"><span class="operations-history_status operations-history_status-confirmed">Подтверждено</span><br/><span class="operations-history_awaiting-confirmation"></span></div>
+              <div class="operations-history_cell"><span class="operations-history_bonus operations-history_bonus-confirmed">+27</span></div>
+            </div>
+            <div class="operations-history_row">
+              <div class="operations-history_cell operations-history_img-info">
+                <div class="operations-history_cell_img"><img class="operations-history_img" src="../../images/media-markt.png"/></div>
+                <div class="operations-history_cell_info"><span class="operations-history_name_brand">Покупка в&ensp;<a href="#">Мегафон</a></span>
+                  <div class="operations-history_cell_price"><span>Номер покупки:&ensp;370320403</span><br/><span>Сумма покупки:&ensp;5 761₽</span></div>
+                </div>
+              </div>
+              <div class="operations-history_cell">18 августа 15:27
+              </div>
+              <div class="operations-history_cell"><span class="operations-history_status operations-history_status-confirmed">Подтверждено</span><br/><span class="operations-history_awaiting-confirmation"></span></div>
+              <div class="operations-history_cell"><span class="operations-history_bonus operations-history_bonus-confirmed">+27</span></div>
+            </div>
+            <div class="operations-history_row">
+              <div class="operations-history_cell operations-history_img-info">
+                <div class="operations-history_cell_img"><img class="operations-history_img" src="../../images/media-markt.png"/></div>
+                <div class="operations-history_cell_info"><span class="operations-history_name_brand">Покупка в&ensp;<a href="#">Мегафон</a></span>
+                  <div class="operations-history_cell_price"><span>Номер покупки:&ensp;370320403</span><br/><span>Сумма покупки:&ensp;5 761₽</span></div>
+                </div>
+              </div>
+              <div class="operations-history_cell">18 августа 15:27
+              </div>
+              <div class="operations-history_cell"><span class="operations-history_status operations-history_status-confirmed">Подтверждено</span><br/><span class="operations-history_awaiting-confirmation"></span></div>
+              <div class="operations-history_cell"><span class="operations-history_bonus operations-history_bonus-confirmed">+27</span></div>
+            </div>
+          </div>
+          <div class="operations-history_button">
+            <button class="btn-color-green">Загрузить еще операции</button>
+          </div>
+        </div>
+      </div>
+      <!-- Footer-->
+      <script src="../../js/scripts.js"></script>
+      <script>
+        (function () {
+        	[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+        		new SelectFx(el);
+        	});
+        })();
+      </script>
+    </div>
+  </body>
+</html>

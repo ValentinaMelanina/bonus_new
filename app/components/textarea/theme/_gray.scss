@@ -1,0 +1,10 @@
+.textarea-gray {
+  border-color: #dcdcdc;
+  background: white;
+  
+  &:hover,
+  &:focus,
+  &:active {
+	border-color: #abc42a;
+  }
+}
