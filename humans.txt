@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/*  TEAM  */
+  Developer: Melanina Valentina
+  	Contact: hello [at] melanina.ru
+  	From: Russia, Moscow
+
+/* SITE */
+    Site name: Тестовый сайт
+    Site URL:
+	Last update: 2017/08/28
+	Language: Russian
+	Doctype: HTML
+	IDE: PhpStorm, FileZilla
+	Software: Photoshop
+
+/*  TECHNOLOGY COLOPHON  */
+    Standards: HTML5, CSS3
+
