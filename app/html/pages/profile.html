@@ -12,9 +12,13 @@
     <!--todo добавить фавикон-->
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <!-- CSS-->
+    <!-- Подключение шрифта Roboto-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Подключение шрифта Open Sans-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Подключение шрифта с иконками-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Стили всего проекта-->
     <link href="../../css/styles.css" rel="stylesheet">
     <!-- JS--><!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -169,19 +173,27 @@
               <div class="operations-history_cell"><span class="operations-history_bonus operations-history_bonus-confirmed">+27</span></div>
             </div>
           </div>
-          <div class="operations-history_button">
-            <button class="btn-color-green">Загрузить еще операции</button>
+          <div class="operations-history_button"><a class="button btn-color-green" id="demo01" href="#animatedModal">Загрузить еще операции</a></div>
+          <!--	Всплывающее окно с информацией по выводу средств-->
+          <!--a(href="#animatedModal")#demo01 DEMO01-->
+          <div id="animatedModal">
+            <div class="close-animatedModal">CLOSE MODAL</div>
+            <div class="modal-content">Your modal content goes here</div>
           </div>
         </div>
       </div>
       <!-- Footer-->
       <script src="../../js/scripts.js"></script>
       <script>
+        // Инициализация select
         (function () {
         	[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
         		new SelectFx(el);
         	});
         })();
+        
+        //	Инициализация модального окна
+        $("#demo01").animatedModal({});
       </script>
     </div>
   </body>

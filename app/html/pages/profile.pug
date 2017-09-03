@@ -30,8 +30,6 @@ mixin operations-history (operation)
 			span(class="operations-history_bonus operations-history_bonus-" + operation.purchase_status_eng + "")
 				=operation.bonus
 
-
-
 block content
 	// Информация о счете
 	.content-top-info.balance
@@ -67,7 +65,6 @@ block content
 	//	Заголовок Н2
 	h2 История операций
 
-
 	//	История операций
 	.operations-history
 		.operations-history_header-table
@@ -79,4 +76,13 @@ block content
 			+operations-history(operation)
 
 	.operations-history_button
-		button.btn-color-green Загрузить еще операции
+		a#demo01.button.btn-color-green(href="#animatedModal") Загрузить еще операции
+
+
+	//	Всплывающее окно с информацией по выводу средств
+	//a(href="#animatedModal")#demo01 DEMO01
+
+	#animatedModal
+		.close-animatedModal CLOSE MODAL
+
+		.modal-content Your modal content goes here

@@ -1,9 +1,13 @@
 script(src="../../js/scripts.js")
 script.
+	// Инициализация select
 	(function () {
 		[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
 			new SelectFx(el);
 		});
 	})();
+
+	//	Инициализация модального окна
+	$("#demo01").animatedModal({});
 
 
