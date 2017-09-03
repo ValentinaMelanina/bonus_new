@@ -55,9 +55,8 @@
               <div class="balance-info-item balance-info_min-price">Минимальная сумма для вывода —  300</div>
               <div class="balance-info-item balance-info_conversion">При выводе бонусов конвертация происходит по курсу 1 бонус = 1 рубль</div>
             </div>
-            <div class="balance-button">
-              <button class="btn-color-green">Вывести бонусы</button>
-              <button class="btn-color-gray">Сообщить о проблеме</button>
+            <div class="balance-button"><a class="button btn-color-green" id="modal_window" href="#animatedModal">Вывести бонусы</a>
+              <button class="button btn-color-gray">Сообщить о проблеме</button>
             </div>
           </div>
           <!-- Основные этапы получения бонусов-->
@@ -173,12 +172,30 @@
               <div class="operations-history_cell"><span class="operations-history_bonus operations-history_bonus-confirmed">+27</span></div>
             </div>
           </div>
-          <div class="operations-history_button"><a class="button btn-color-green" id="demo01" href="#animatedModal">Загрузить еще операции</a></div>
+          <div class="operations-history_button">
+            <button class="button btn-color-green">Загрузить еще операции</button>
+          </div>
           <!--	Всплывающее окно с информацией по выводу средств-->
-          <!--a(href="#animatedModal")#demo01 DEMO01-->
           <div id="animatedModal">
-            <div class="close-animatedModal">CLOSE MODAL</div>
-            <div class="modal-content">Your modal content goes here</div>
+            <div class="modal-wrapper"></div>
+            <div class="modal-container">
+              <div class="close-animatedModal"></div>
+              <div id="modal-content">
+                <ul class="modal__tabs">
+                  <h3>Как вам удобно вывести?</h3>
+                  <li><a href="#tab-1">на банковскую карту</a></li>
+                  <li><a href="#tab-2">на мобильный номер</a></li>
+                  <li><a href="#tab-1">на страховой счет</a></li>
+                </ul>
+                <div id="tab-1">
+                  <div class="model__tabs-content">
+                    <h3><span class="header-grey">Бонусов доступно:</span>15 560</h3>
+                  </div>
+                </div>
+                <div id="tab-2">Текст для второй вкладки</div>
+                <div id="tab-3">Текст для третьей вкладки</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -193,7 +210,16 @@
         })();
         
         //	Инициализация модального окна
-        $("#demo01").animatedModal({});
+        $(document).ready(function () {
+        	$("#modal_window").animatedModal({
+        		color: false
+        	});
+        });
+        
+        //	Инициализация вкладок
+        $('#modal-content').responsiveTabs({
+        
+        });
       </script>
     </div>
   </body>

@@ -6,6 +6,14 @@ h2 {
   color: rgba(0, 0, 0, 0.87);
   margin-bottom: 45px;
 }
+h3 {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  
+  & .header-grey {
+	color: rgba(0, 0, 0, 0.54)
+  }
+}
 .sidebar h2 {
   padding: 40px 25px 42px;
   margin-bottom: 0;

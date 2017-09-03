@@ -33,6 +33,11 @@
 @import "../components/textarea/styles";
 
 /* ==========================================================================
+   Tabs
+   ========================================================================== */
+@import "../components/tabs/styles";
+
+/* ==========================================================================
    Catalog brands
    ========================================================================== */
 .catalog-brands {
@@ -534,3 +539,72 @@ details.questions-answers {
   }
 
 }
+
+/* ==========================================================================
+   Modal window
+   ========================================================================== */
+#animatedModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.modal-wrapper {
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.modal-container {
+  width: 787px;
+  height: 346px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font: 14px "Open Sans", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  
+  & h3 {
+	color: #2b2b2b;
+	font-weight: normal;
+	line-height: normal;
+  }
+  
+}
+.close-animatedModal {
+  position: absolute;
+  right: -33px;
+  cursor: pointer;
+  
+  &:before {
+	content: "";
+	background: url("../images/icon-close.svg") no-repeat center;
+	height: 23px;
+	width: 23px;
+	top: 0;
+	left: 0;
+	display: block;
+  }
+  
+  &:hover,
+  &:active {
+	&:before {
+	  background-size: 75%;
+	}
+  }
+}
+
+//.modal__tabs {
+//  padding: 35px;
+//  background-color: #f7f7f7;
+//  border-radius: 4px 0 0 4px;
+//}
+//.model__tabs-content {
+//  padding: 35px;
+//}

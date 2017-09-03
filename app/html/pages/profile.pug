@@ -48,8 +48,8 @@ block content
 			.balance-info-item.balance-info_conversion При выводе бонусов конвертация происходит по курсу 1 бонус = 1 рубль
 
 		.balance-button
-			button.btn-color-green Вывести бонусы
-			button.btn-color-gray Сообщить о проблеме
+			a.button.btn-color-green#modal_window(href="#animatedModal") Вывести бонусы
+			button.button.btn-color-gray Сообщить о проблеме
 
 
 	// Основные этапы получения бонусов
@@ -76,13 +76,30 @@ block content
 			+operations-history(operation)
 
 	.operations-history_button
-		a#demo01.button.btn-color-green(href="#animatedModal") Загрузить еще операции
+		button.button.btn-color-green Загрузить еще операции
 
 
 	//	Всплывающее окно с информацией по выводу средств
-	//a(href="#animatedModal")#demo01 DEMO01
-
 	#animatedModal
-		.close-animatedModal CLOSE MODAL
+		.modal-wrapper
 
-		.modal-content Your modal content goes here
+		.modal-container
+			.close-animatedModal
+
+			#modal-content
+				ul.modal__tabs
+					h3 Как вам удобно вывести?
+					li
+						a(href="#tab-1") на банковскую карту
+					li
+						a(href="#tab-2") на мобильный номер
+					li
+						a(href="#tab-1") на страховой счет
+
+				div#tab-1
+					.model__tabs-content
+						h3
+							span.header-grey Бонусов доступно:
+							| 15 560
+				div#tab-2 Текст для второй вкладки
+				div#tab-3 Текст для третьей вкладки

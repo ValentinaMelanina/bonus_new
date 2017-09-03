@@ -165,7 +165,16 @@
         })();
         
         //	Инициализация модального окна
-        $("#demo01").animatedModal({});
+        $(document).ready(function () {
+        	$("#modal_window").animatedModal({
+        		color: false
+        	});
+        });
+        
+        //	Инициализация вкладок
+        $('#modal-content').responsiveTabs({
+        
+        });
       </script>
     </div>
   </body>
