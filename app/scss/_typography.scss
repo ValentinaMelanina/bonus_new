@@ -28,6 +28,7 @@ h3 {
   position: relative;
   display: flex;
   justify-content: flex-start;
+  align-self: center;
   align-items: center;
   padding-left: 15px;
   
@@ -40,6 +41,17 @@ h3 {
 	border-radius: 50%;
 	align-self: center;
 	left: 0;
-	top: 4px;
+	top: 6px;
+  }
+  
+  & .tooltip-info {
+	height: 22px;
+	width: 22px;
+	border: 1px solid #757575;
+	background: white;
+	
+	&:before {
+	  content: "?";
+	}
   }
 }
