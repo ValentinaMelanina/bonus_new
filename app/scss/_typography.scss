@@ -18,5 +18,28 @@ h3 {
   padding: 40px 25px 42px;
   margin-bottom: 0;
 }
-
-
+.color-black {
+  color: black;
+}
+.input-small {
+  font-size: 12px;
+}
+.link-delete {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 15px;
+  
+  &:before {
+	background: #fe6063;
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	align-self: center;
+	left: 0;
+	top: 4px;
+  }
+}

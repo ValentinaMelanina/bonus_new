@@ -181,19 +181,57 @@
             <div class="modal-container">
               <div class="close-animatedModal"></div>
               <div id="modal-content">
+                <!-- Вкладки-->
                 <ul class="modal__tabs">
                   <h3>Как вам удобно вывести?</h3>
-                  <li><a href="#tab-1">на банковскую карту</a></li>
-                  <li><a href="#tab-2">на мобильный номер</a></li>
-                  <li><a href="#tab-1">на страховой счет</a></li>
+                  <li class="modal-tabs__icon modal-tabs__icon-bank"><a href="#tab-1">на банковскую карту</a></li>
+                  <li class="modal-tabs__icon modal-tabs__icon-phone"><a href="#tab-2">на мобильный номер</a></li>
+                  <li class="modal-tabs__icon modal-tabs__icon-insurance"><a href="#tab-3">на страховой счет</a></li>
                 </ul>
-                <div id="tab-1">
-                  <div class="model__tabs-content">
-                    <h3><span class="header-grey">Бонусов доступно:</span>15 560</h3>
+                <!-- Содержимое вкладок-->
+                <div class="modal-tabs__content-container">
+                  <div id="tab-1">
+                    <div class="model__tabs-content">
+                      <h3>Бонусов доступно:&ensp;<span class="color-black">15 560</span></h3>
+                      <form class="form-enter-bonuses">
+                        <!-- Доступная сумма бонусов-->
+                        <div class="enter-bonuses">Сумма бонусов<sup>*</sup>
+                          <input class="input input-gray" type="text" placeholder="от 300 до 14 999">
+                        </div>
+                        <!-- Список с номерами карт-->
+                        <ul class="save-list-card">
+                          <li>
+                            <input class="input input-gray" id="radio-card-number" type="radio" name="radio-card-number" value="radio-card-number-1" checked>
+                            <label for="radio-card-number">0000 1111 2222 4444</label><a class="link-delete" href="#">Удалить</a>
+                          </li>
+                          <li>
+                            <input class="input input-gray" id="radio-card-number-2" type="radio" name="radio-card-number" value="radio-card-number-2">
+                            <label for="radio-card-number-2">Добавить номер карты</label>
+                          </li>
+                        </ul>
+                        <!-- Поле для ввода номера карты-->
+                        <input class="input input-gray input-card-number" type="text" placeholder="Введите номер карты">
+                        <!-- Checkbox для сохранения номера карт-->
+                        <input class="input input-gray" id="checkbox-save-card" type="checkbox">
+                        <label class="input-small label-save-card" for="checkbox-save-card">Сохранить номер карты</label>
+                        <!-- Блок для кнопок-->
+                        <div class="form-enter-bonuses__button">
+                          <button class="button btn-color-green btn-get-bonus" type="submit">Вывести</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div id="tab-2">
+                    <div class="model__tabs-content">
+                      <h3><span class="header-grey">Бонусов доступно:&ensp;</span>17 560</h3>
+                    </div>
+                  </div>
+                  <div id="tab-3">
+                    <div class="model__tabs-content">
+                      <h3><span class="header-grey">Бонусов доступно:&ensp;</span>18 560</h3>
+                    </div>
                   </div>
                 </div>
-                <div id="tab-2">Текст для второй вкладки</div>
-                <div id="tab-3">Текст для третьей вкладки</div>
               </div>
             </div>
           </div>
@@ -218,7 +256,7 @@
         
         //	Инициализация вкладок
         $('#modal-content').responsiveTabs({
-        
+        	startCollapsed: 'accordion'
         });
       </script>
     </div>

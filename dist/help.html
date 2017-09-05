@@ -12,9 +12,13 @@
     <!--todo добавить фавикон-->
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <!-- CSS-->
+    <!-- Подключение шрифта Roboto-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Подключение шрифта Open Sans-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Подключение шрифта с иконками-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Стили всего проекта-->
     <link href="css/styles.min.css" rel="stylesheet">
     <!-- JS--><!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -54,7 +58,7 @@
               <div class="feedback-form_row">
                 <textarea class="textarea textarea-gray feedback-form_content" name="textarea" placeholder="Расскажите о проблеме"></textarea>
               </div>
-              <button class="btn-color-green" type="submit">Задать вопрос</button>
+              <button class="button btn-color-green" type="submit">Задать вопрос</button>
             </form>
           </div>
           <!--	Заголовок Н2-->
@@ -121,11 +125,24 @@
       <!-- Footer-->
       <script src="js/scripts.min.js"></script>
       <script>
+        // Инициализация select
         (function () {
         	[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
         		new SelectFx(el);
         	});
         })();
+        
+        //	Инициализация модального окна
+        $(document).ready(function () {
+        	$("#modal_window").animatedModal({
+        		color: false
+        	});
+        });
+        
+        //	Инициализация вкладок
+        $('#modal-content').responsiveTabs({
+        	startCollapsed: 'accordion'
+        });
       </script>
     </div>
   </body>

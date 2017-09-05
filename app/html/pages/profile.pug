@@ -87,19 +87,65 @@ block content
 			.close-animatedModal
 
 			#modal-content
+				// Вкладки
 				ul.modal__tabs
 					h3 Как вам удобно вывести?
-					li
+					li.modal-tabs__icon.modal-tabs__icon-bank
 						a(href="#tab-1") на банковскую карту
-					li
+					li.modal-tabs__icon.modal-tabs__icon-phone
 						a(href="#tab-2") на мобильный номер
-					li
-						a(href="#tab-1") на страховой счет
+					li.modal-tabs__icon.modal-tabs__icon-insurance
+						a(href="#tab-3") на страховой счет
 
-				div#tab-1
-					.model__tabs-content
-						h3
-							span.header-grey Бонусов доступно:
-							| 15 560
-				div#tab-2 Текст для второй вкладки
-				div#tab-3 Текст для третьей вкладки
+				// Содержимое вкладок
+				div.modal-tabs__content-container
+					div#tab-1
+						.model__tabs-content
+							h3 Бонусов доступно:&ensp;
+								span.color-black 15 560
+
+							form.form-enter-bonuses
+								// Доступная сумма бонусов
+								.enter-bonuses
+									| Сумма бонусов
+									sup *
+									input.input.input-gray(type="text", placeholder="от 300 до 14 " +
+									"999")
+
+								// Список с номерами карт
+								ul.save-list-card
+									li
+										input.input.input-gray#radio-card-number(type="radio",
+																				name="radio-card-number"
+																				value="radio-card-number-1"
+																				checked)
+										label(for="radio-card-number") 0000 1111 2222 4444
+										a(href="#").link-delete Удалить
+									li
+										input.input.input-gray#radio-card-number-2(type="radio",
+																					name="radio-card-number"
+																					value="radio-card-number-2")
+										label(for="radio-card-number-2") Добавить номер карты
+
+								// Поле для ввода номера карты
+								input.input.input-gray.input-card-number(type="text", placeholder="Введите номер карты")
+
+								// Checkbox для сохранения номера карт
+								input.input.input-gray#checkbox-save-card(type="checkbox")
+								label(for="checkbox-save-card").input-small.label-save-card Сохранить номер карты
+
+								// Блок для кнопок
+								.form-enter-bonuses__button
+									button.button.btn-color-green.btn-get-bonus(type="submit") Вывести
+
+
+					div#tab-2
+						.model__tabs-content
+							h3
+								span.header-grey Бонусов доступно:&ensp;
+								| 17 560
+					div#tab-3
+						.model__tabs-content
+							h3
+								span.header-grey Бонусов доступно:&ensp;
+								| 18 560

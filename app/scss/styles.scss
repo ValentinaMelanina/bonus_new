@@ -300,7 +300,7 @@
 	}
   }
 }
-.balance-button button {
+.balance-button .button {
   margin-right: 15px;
 }
 .cacheback-info {
@@ -560,7 +560,6 @@ details.questions-answers {
 }
 .modal-container {
   width: 787px;
-  height: 346px;
   border-radius: 4px;
   background-color: #ffffff;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
@@ -570,10 +569,16 @@ details.questions-answers {
   font: 14px "Open Sans", sans-serif;
   color: rgba(0, 0, 0, 0.5);
   
-  & h3 {
+  & .modal__tabs h3 {
 	color: #2b2b2b;
 	font-weight: normal;
 	line-height: normal;
+	margin-bottom: 28px;
+	padding: 35px 35px 0 35px;
+  }
+  
+  & h3 {
+	font-weight: normal;
   }
   
 }
@@ -600,11 +605,115 @@ details.questions-answers {
   }
 }
 
-//.modal__tabs {
-//  padding: 35px;
-//  background-color: #f7f7f7;
-//  border-radius: 4px 0 0 4px;
-//}
-//.model__tabs-content {
-//  padding: 35px;
-//}
+#modal-content {
+  display: flex;
+  width: 100%;
+}
+.modal__tabs {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #f7f7f7;
+  border-radius: 4px 0 0 4px;
+  
+  & li.r-tabs-state-active:last-child .r-tabs-anchor,
+  & li:last-child:hover .r-tabs-anchor {
+	border-radius: 0 0 0 4px;
+  }
+}
+.model__tabs-content {
+  padding: 35px;
+}
+.modal-tabs__content-container {
+  flex-grow: 1;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.modal-tabs__icon .r-tabs-anchor {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  align-content: center;
+  align-items: center;
+  
+  &:before {
+	content: "";
+	background-image: url(../images/icon.svg);
+	width: 55px;
+	height: 45px;
+	align-self: center;
+	margin-right: 10px;
+	transition: background-image 1s ease;
+  }
+  
+  &:hover {
+	color: #750d70;
+	background-color: #f2f2f2;
+	cursor: pointer;
+  }
+}
+.modal-tabs__icon:hover {
+  cursor: pointer;
+}
+
+.modal-tabs__icon-bank .r-tabs-anchor:before {
+  background-position: 5px 512px;
+}
+.modal-tabs__icon-bank.r-tabs-state-active .r-tabs-anchor:before,
+.modal-tabs__icon-bank:hover .r-tabs-anchor:before {
+  background-position: 5px 469px;
+}
+.modal-tabs__icon-phone .r-tabs-anchor:before {
+  background-position: 5px 304px;
+}
+.modal-tabs__icon-phone.r-tabs-state-active .r-tabs-anchor:before,
+.modal-tabs__icon-phone:hover .r-tabs-anchor:before {
+  background-position: 5px 250px;
+}
+.modal-tabs__icon-insurance .r-tabs-anchor:before {
+  background-position: 5px 131px;
+}
+.modal-tabs__icon-insurance.r-tabs-state-active .r-tabs-anchor:before,
+.modal-tabs__icon-insurance:hover .r-tabs-anchor:before {
+  background-position: 5px 81px;
+}
+
+.enter-bonuses {
+  margin: 40px 0 20px;
+  
+  & input {
+	margin-left: 15px;
+  }
+}
+form.form-enter-bonuses {
+  
+  & .input-card-number {
+	display: block;
+	width: 357px;
+	margin-bottom: 12px;
+  }
+  
+  & .form-enter-bonuses__button {
+	text-align: center;
+	margin-top: 35px;
+  }
+  
+  & ul.save-list-card {
+	margin-bottom: 22px;
+	
+	& li {
+	  margin-bottom: 15px;
+	  display: flex;
+	}
+	
+	& .link-delete {
+	  font-size: 11px;
+	}
+  }
+  
+  & input {
+	color: rgba(0, 0, 0, 0.87);
+  }
+}
+
+

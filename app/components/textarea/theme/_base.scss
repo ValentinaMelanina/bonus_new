@@ -1,7 +1,8 @@
-::-webkit-input-placeholder {color:#4c4c4c;}
-::-moz-placeholder          {color:#4c4c4c;}/* Firefox 19+ */
-:-moz-placeholder           {color:#4c4c4c;}/* Firefox 18- */
-:-ms-input-placeholder      {color:#4c4c4c;}
+textarea::-webkit-input-placeholder {color:rgba(0, 0, 0, 0.54);}
+textarea::-moz-placeholder          {color:rgba(0, 0, 0, 0.54);}/* Firefox 19+ */
+textarea:-moz-placeholder           {color:rgba(0, 0, 0, 0.54);}/* Firefox 18- */
+textarea:-ms-input-placeholder      {color:rgba(0, 0, 0, 0.54);}
+
 
 .textarea {
   position: relative;

@@ -1,7 +1,9 @@
-::-webkit-input-placeholder {color:#4c4c4c;}
-::-moz-placeholder          {color:#4c4c4c;}/* Firefox 19+ */
-:-moz-placeholder           {color:#4c4c4c;}/* Firefox 18- */
-:-ms-input-placeholder      {color:#4c4c4c;}
+input::-webkit-input-placeholder {color: rgba(0, 0, 0, 0.54); text-overflow:ellipsis;}
+input::-moz-placeholder          {color:rgba(0, 0, 0, 0.54); text-overflow:ellipsis;}/* Firefox 19+ */
+input:-moz-placeholder           {color:rgba(0, 0, 0, 0.54); text-overflow:ellipsis;}/* Firefox 18- */
+input:-ms-input-placeholder      {color:rgba(0, 0, 0, 0.54); text-overflow:ellipsis;}
+input[placeholder] {color:rgba(0, 0, 0, 0.54); text-overflow:ellipsis;}
+
 
 .input {
   position: relative;
@@ -18,3 +20,80 @@
     -webkit-transition: border-color .6s ease;
   transition: border-color .6s ease;
 }
+
+// Checkbox
+label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+input[type=checkbox] {
+  display: none;
+  
+  &+label {
+	padding-left: 26px;
+ 
+	&:before {
+	  content: "";
+	  width: 16px;
+	  height: 16px;
+	  margin-right: 10px;
+	  border-radius: 3px;
+	  border: solid 1px rgb(221, 221, 221);
+	  background: white;
+	  position: absolute;
+	  left: 0;
+	  align-self: center;
+	}
+  }
+  
+  
+  &:checked + label:before {
+	content: "\f00c";
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	font-size: 11px;
+	color: #f3f3f3;
+	text-align: center;
+	line-height: 17px;
+	font-family: FontAwesome;
+	background: #abc42a;
+	border-color: #abc42a;
+  }
+}
+
+// Radio
+input[type=radio] {
+  display: none;
+  
+  &+label {
+	padding-left: 30px;
+	margin-right: 30px;
+	
+	&:before {
+	  content: "";
+	  width: 20px;
+	  height: 20px;
+	  margin-right: 10px;
+	  border-radius: 50%;
+	  border: solid 1px #979797;
+	  background: white;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  align-self: center;
+	}
+  }
+  
+  &:checked + label:before {
+	content: "\f111";
+	color: #750d70;
+	font-size: 14px;
+	line-height: 18px;
+	height: 18px;
+	width: 18px;
+	font-family: FontAwesome;
+	text-align: center;
+	border: 2px solid #750d70;
+  }
+}
+

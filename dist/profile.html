@@ -12,9 +12,13 @@
     <!--todo добавить фавикон-->
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <!-- CSS-->
+    <!-- Подключение шрифта Roboto-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Подключение шрифта Open Sans-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Подключение шрифта с иконками-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Стили всего проекта-->
     <link href="css/styles.min.css" rel="stylesheet">
     <!-- JS--><!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -51,9 +55,8 @@
               <div class="balance-info-item balance-info_min-price">Минимальная сумма для вывода —  300</div>
               <div class="balance-info-item balance-info_conversion">При выводе бонусов конвертация происходит по курсу 1 бонус = 1 рубль</div>
             </div>
-            <div class="balance-button">
-              <button class="btn-color-green">Вывести бонусы</button>
-              <button class="btn-color-gray">Сообщить о проблеме</button>
+            <div class="balance-button"><a class="button btn-color-green" id="modal_window" href="#animatedModal">Вывести бонусы</a>
+              <button class="button btn-color-gray">Сообщить о проблеме</button>
             </div>
           </div>
           <!-- Основные этапы получения бонусов-->
@@ -170,18 +173,91 @@
             </div>
           </div>
           <div class="operations-history_button">
-            <button class="btn-color-green">Загрузить еще операции</button>
+            <button class="button btn-color-green">Загрузить еще операции</button>
+          </div>
+          <!--	Всплывающее окно с информацией по выводу средств-->
+          <div id="animatedModal">
+            <div class="modal-wrapper"></div>
+            <div class="modal-container">
+              <div class="close-animatedModal"></div>
+              <div id="modal-content">
+                <!-- Вкладки-->
+                <ul class="modal__tabs">
+                  <h3>Как вам удобно вывести?</h3>
+                  <li class="modal-tabs__icon modal-tabs__icon-bank"><a href="#tab-1">на банковскую карту</a></li>
+                  <li class="modal-tabs__icon modal-tabs__icon-phone"><a href="#tab-2">на мобильный номер</a></li>
+                  <li class="modal-tabs__icon modal-tabs__icon-insurance"><a href="#tab-3">на страховой счет</a></li>
+                </ul>
+                <!-- Содержимое вкладок-->
+                <div class="modal-tabs__content-container">
+                  <div id="tab-1">
+                    <div class="model__tabs-content">
+                      <h3>Бонусов доступно:&ensp;<span class="color-black">15 560</span></h3>
+                      <form class="form-enter-bonuses">
+                        <!-- Доступная сумма бонусов-->
+                        <div class="enter-bonuses">Сумма бонусов<sup>*</sup>
+                          <input class="input input-gray" type="text" placeholder="от 300 до 14 999">
+                        </div>
+                        <!-- Список с номерами карт-->
+                        <ul class="save-list-card">
+                          <li>
+                            <input class="input input-gray" id="radio-card-number" type="radio" name="radio-card-number" value="radio-card-number-1" checked>
+                            <label for="radio-card-number">0000 1111 2222 4444</label><a class="link-delete" href="#">Удалить</a>
+                          </li>
+                          <li>
+                            <input class="input input-gray" id="radio-card-number-2" type="radio" name="radio-card-number" value="radio-card-number-2">
+                            <label for="radio-card-number-2">Добавить номер карты</label>
+                          </li>
+                        </ul>
+                        <!-- Поле для ввода номера карты-->
+                        <input class="input input-gray input-card-number" type="text" placeholder="Введите номер карты">
+                        <!-- Checkbox для сохранения номера карт-->
+                        <input class="input input-gray" id="checkbox-save-card" type="checkbox">
+                        <label class="input-small label-save-card" for="checkbox-save-card">Сохранить номер карты</label>
+                        <!-- Блок для кнопок-->
+                        <div class="form-enter-bonuses__button">
+                          <button class="button btn-color-green btn-get-bonus" type="submit">Вывести</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div id="tab-2">
+                    <div class="model__tabs-content">
+                      <h3><span class="header-grey">Бонусов доступно:&ensp;</span>17 560</h3>
+                    </div>
+                  </div>
+                  <div id="tab-3">
+                    <div class="model__tabs-content">
+                      <h3><span class="header-grey">Бонусов доступно:&ensp;</span>18 560</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <!-- Footer-->
       <script src="js/scripts.min.js"></script>
       <script>
+        // Инициализация select
         (function () {
         	[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
         		new SelectFx(el);
         	});
         })();
+        
+        //	Инициализация модального окна
+        $(document).ready(function () {
+        	$("#modal_window").animatedModal({
+        		color: false
+        	});
+        });
+        
+        //	Инициализация вкладок
+        $('#modal-content').responsiveTabs({
+        	startCollapsed: 'accordion'
+        });
       </script>
     </div>
   </body>
