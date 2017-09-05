@@ -115,17 +115,21 @@ block content
 								// Список с номерами карт
 								ul.save-list-card
 									li
-										input.input.input-gray#radio-card-number(type="radio",
-																				name="radio-card-number"
-																				value="radio-card-number-1"
-																				checked)
-										label(for="radio-card-number") 0000 1111 2222 4444
+										label(for="radio-card-number")
+											input.input.input-gray#radio-card-number(type="radio",
+																					name="radio-card-number"
+																					value="radio-card-number-1"
+																					checked)
+											span
+											| 0000 1111 2222 4444
 										a(href="#").link-delete Удалить
 									li
-										input.input.input-gray#radio-card-number-2(type="radio",
-																					name="radio-card-number"
-																					value="radio-card-number-2")
-										label(for="radio-card-number-2") Добавить номер карты
+										label(for="radio-card-number-2")
+											input.input.input-gray#radio-card-number-2(type="radio",
+																						name="radio-card-number"
+																						value="radio-card-number-2")
+											span
+											| Добавить номер карты
 
 								// Поле для ввода номера карты
 								input.input.input-gray.input-card-number(type="text", placeholder="Введите номер карты")
