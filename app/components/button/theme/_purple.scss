@@ -1,6 +1,16 @@
 .btn-color-purple {
-  background: #800074;
-  border: 2px solid #800074;
+  background: #750d70;
+  border: 2px solid #750d70;
   color: white;
   text-transform: uppercase;
+  
+  &:hover {
+    background: #93138d;
+    border-color: #93138d;
+  }
+  &:active {
+    background: #560752;
+    border-color: #560752;
+  }
+  
 }

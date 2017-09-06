@@ -14,12 +14,19 @@ h3 {
 	color: rgba(0, 0, 0, 0.54)
   }
 }
+h4 {
+  font-weight: bold;
+  padding: 20px 0;
+}
 .sidebar h2 {
   padding: 40px 25px 42px;
   margin-bottom: 0;
 }
 .color-black {
   color: black;
+}
+.color-grey {
+  color: rgba(146, 146, 146, 0.87);
 }
 .input-small {
   font-size: 12px;
@@ -42,16 +49,5 @@ h3 {
 	align-self: center;
 	left: 0;
 	top: 6px;
-  }
-  
-  & .tooltip-info {
-	height: 22px;
-	width: 22px;
-	border: 1px solid #757575;
-	background: white;
-	
-	&:before {
-	  content: "?";
-	}
   }
 }
