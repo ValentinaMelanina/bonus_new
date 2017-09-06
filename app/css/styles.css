@@ -2759,9 +2759,13 @@ h4 {
     left: 0;
     top: 6px; }
 
+html {
+  height: 100%; }
+
 body {
   font-size: 16px;
-  font-family: Roboto, sans-serif; }
+  font-family: Roboto, sans-serif;
+  height: 100%; }
 
 .wrapper {
   max-width: 1205px;
@@ -3956,5 +3960,100 @@ ol.cacheback_steps-partner {
   line-height: 1.75;
   letter-spacing: -0.4px;
   text-align: left; }
+
+/* ==========================================================================
+   Points activate page
+   ========================================================================== */
+.points-activate-container {
+  max-width: none;
+  text-align: center;
+  font-family: "Open Sans";
+  height: 100%; }
+
+.points-activate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+  .points-activate .points-activate__status {
+    position: relative;
+    background: white;
+    padding: 60px 0 0;
+    height: 445px;
+    width: 1205px;
+    margin: 0 auto;
+    flex: 1 0 auto;
+    line-height: normal; }
+    .points-activate .points-activate__status .logo {
+      width: 180px;
+      height: auto;
+      margin: 0 auto;
+      display: inline-block;
+      margin-bottom: 53px; }
+      .points-activate .points-activate__status .logo img {
+        width: 100%;
+        height: auto; }
+    .points-activate .points-activate__status h1 {
+      font-weight: normal;
+      font-size: 36px;
+      width: 1205px; }
+      .points-activate .points-activate__status h1 + span {
+        font-size: 26px;
+        color: rgba(43, 43, 43, 0.54); }
+    .points-activate .points-activate__status .circles {
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.15);
+      border-radius: 50%;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: -89px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      cursor: pointer; }
+      .points-activate .points-activate__status .circles:after, .points-activate .points-activate__status .circles:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        align-self: center;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute; }
+      .points-activate .points-activate__status .circles:after {
+        opacity: 0.4;
+        right: -20px; }
+      .points-activate .points-activate__status .circles:before {
+        opacity: 0.1;
+        left: -20px; }
+  .points-activate .points-activate__button-wrap {
+    padding: 280px 0 72px;
+    background: #f7f7f7;
+    flex: 0 0 auto; }
+  .points-activate .points-activate__button {
+    width: 1205px;
+    margin: 0 auto; }
+  .points-activate .points-activate__points {
+    position: absolute;
+    border: 8px solid #bd8bba;
+    background: #750d70;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 178px;
+    width: 178px;
+    bottom: -89px;
+    right: 0;
+    left: 0;
+    margin: auto; }
+    .points-activate .points-activate__points .points-activate__percent {
+      font-size: 50px; }
 
 /*# sourceMappingURL=styles.css.map */
