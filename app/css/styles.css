@@ -4056,4 +4056,37 @@ ol.cacheback_steps-partner {
     .points-activate .points-activate__points .points-activate__percent {
       font-size: 50px; }
 
+/* ==========================================================================
+   Application status page
+   ========================================================================== */
+.application-status-container {
+  background: #eeeeee url("../images/group-6.png") no-repeat top left;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 542px;
+  padding: 70px 0 40px;
+  text-align: center; }
+  .application-status-container p {
+    line-height: 1.38;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 0 35px; }
+
+.application-status {
+  border-radius: 4px;
+  background: white url("../images/group-8.png") no-repeat center 55px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  color: #2b2b2b;
+  font-size: 21px;
+  font-family: "Open Sans", sans-serif;
+  width: 400px;
+  margin: 0 auto 25px;
+  text-align: center;
+  padding: 150px 30px 35px;
+  box-sizing: border-box;
+  line-height: 1.29; }
+
+.application-status__button {
+  text-align: center;
+  margin: 25px 0 0; }
+
 /*# sourceMappingURL=styles.css.map */
